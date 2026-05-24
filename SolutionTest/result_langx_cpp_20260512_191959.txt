@@ -1,0 +1,32 @@
+LangX C++ Test – 2026-05-12T19:19:59
+Model: d:/School/RTU/LangX/SolutionTest\model\Qwen_Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf
+Image: d:/School/RTU/LangX/SolutionTest\robot2.jpg
+============================================================
+Model load time: 3.14s
+
+--- introduction: Basic question about sky color ---
+Prompt: Hello! I want to have a conversation with you. Here is an important fact to remember: My name is Jimmy. Now, what color is the sky on a clear day?
+Response: The sky on a clear day is typically blue.
+Pattern: blue
+Result: PASS (0.18s)
+
+--- image_describe: Describe the robot2.jpg image ---
+Prompt: Describe what you see in this image in detail.
+Response: The image showcases a detailed design of a futuristic robot named "Scarab Azul" and its pilot. The robot is predominantly blue with white and black accents, and it has a complex mechanical structure with articulated limbs and various weaponry. Notable features include two large arms with claw-like hands, a central rail gun, cluster missiles, mounted blades, and an internal Gatling gun system. The robot also has multiple legs and what appears to be a large shoulder-mounted cannon or shield. The pilot stands to the right of the robot, dressed in a white and blue uniform that matches the robot's color scheme. The uniform includes shoulder pads, gloves, and boots, and it has various patches and details. The background is a gradient of blue, and there are various technical specifications in the upper left corner, such as size (10.3 meters), speed (120 KPH), and weapons details. The robot is labeled as "SCARAB AZUL," and the image has a futuristic and tactical feel.
+Pattern: robot|mech|machine|armor|metal|figure|character
+Result: PASS (11.38s)
+
+--- fact_recall: Recall fact from the introduction ---
+Prompt: Earlier I told you an important fact. What was it? Repeat it.
+Response: Your name is Jimmy.
+Pattern: Jimmy
+Result: PASS (0.29s)
+
+============================================================
+SUMMARY
+  introduction: PASS (0.18s)
+  image_describe: PASS (11.38s)
+  fact_recall: PASS (0.29s)
+
+Total: 3/3 passed, 0 failed, 0 errors
+Total time: 15.10s

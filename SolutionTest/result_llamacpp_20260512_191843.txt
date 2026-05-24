@@ -1,0 +1,38 @@
+Llama.cpp C++ Test – 2026-05-12T19:18:43
+Model: d:/School/RTU/LangX/SolutionTest\model\Qwen_Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf
+Image: d:/School/RTU/LangX/SolutionTest\robot2.jpg
+============================================================
+Model load time: 3.27s
+
+--- introduction: Basic question about sky color ---
+Prompt: Hello! I want to have a conversation with you. Here is an important fact to remember: My name is Jimmy. Now, what color is the sky on a clear day?
+Response: The color of the sky on a clear day is typically blue.
+Pattern: blue
+Result: PASS (0.22s)
+
+--- image_describe: Describe the robot2.jpg image ---
+Prompt: Describe what you see in this image in detail.
+Response: The image appears to be a concept or blueprint-style illustration for a mecha, titled "SCARAB AZUL." It includes two primary sections. 
+
+1. On the left side, there is a full-body depiction of the mecha, "Scarab Azul." The design is intricate, with a humanoid form equipped with mechanical limbs and various weapon systems. The mecha features blue and gray coloration, with accents of white and red. It is labeled with details such as its size (10.3 m), speed (120 KPH), and weapons (internal Gatling x2, Core Rail Gun, Cluster Missiles x200, Mounted Blade x2, Option Slot x2). The illustration includes a hexagonal grid overlay with terms like "PWR" (power), "SPD" (speed), and "SPC" (space).
+
+2. On the right side, there is a pilot, standing next to the mecha, dressed in a white and blue suit with a helmet, suggesting a futuristic military or space-faring setting. The pilot is labeled as "PILOT."
+
+The overall theme of the image is futuristic and likely belongs to a science fiction context. The design, colors, and layout suggest it is part of a concept art for a video game, movie, or animated series.
+Pattern: robot|mech|machine|armor|metal|figure|character
+Result: PASS (12.13s)
+
+--- fact_recall: Recall fact from the introduction ---
+Prompt: Earlier I told you an important fact. What was it? Repeat it.
+Response: Your important fact was: "My name is Jimmy."
+Pattern: Jimmy
+Result: PASS (0.39s)
+
+============================================================
+SUMMARY
+  introduction: PASS (0.22s)
+  image_describe: PASS (12.13s)
+  fact_recall: PASS (0.39s)
+
+Total: 3/3 passed, 0 failed, 0 errors
+Total time: 16.10s

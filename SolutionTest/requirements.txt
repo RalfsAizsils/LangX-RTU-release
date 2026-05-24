@@ -1,0 +1,7 @@
+ollama
+llama-cpp-python
+# llama-cpp-python installs CPU-only by default.
+# GPU support requires rebuilding with a backend flag:
+#   CUDA (NVIDIA):  $env:CMAKE_ARGS='-DGGML_CUDA=on'; pip install llama-cpp-python --force-reinstall --no-cache-dir
+#   Vulkan (AMD/any): $env:CMAKE_ARGS='-DGGML_VULKAN=on'; pip install llama-cpp-python --force-reinstall --no-cache-dir
+#   ROCm (AMD Linux): $env:CMAKE_ARGS='-DGGML_HIPBLAS=on'; pip install llama-cpp-python --force-reinstall --no-cache-dir

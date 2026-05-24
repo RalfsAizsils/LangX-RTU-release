@@ -1,0 +1,32 @@
+LlamaLib C++ Test – 2026-05-12T19:52:25
+Model: d:/School/RTU/LangX/SolutionTest\model\Qwen_Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf
+Note: LlamaLib does not support VLM/image processing.
+============================================================
+Model load time: 3.18s
+
+--- introduction: Basic question about sky color ---
+Prompt: Hello! I want to have a conversation with you. Here is an important fact to remember: My name is Jimmy. Now, what color is the sky on a clear day?
+Response: On a clear day, the sky is typically blue.
+Pattern: blue
+Result: PASS (0.20s)
+
+--- image_describe: Describe the robot2.jpg image ---
+Prompt: Describe what you see in this image in detail.
+Response: I'm sorry, but I cannot see an image as I am a text-based AI. Please provide a detailed description of the image or upload the image for me to analyze.
+Pattern: robot|mech|machine|armor|metal|figure|character
+Result: FAIL (0.46s)
+
+--- fact_recall: Recall fact from the introduction ---
+Prompt: Earlier I told you an important fact. What was it? Repeat it.
+Response: Your name is Jimmy.
+Pattern: Jimmy
+Result: PASS (0.11s)
+
+============================================================
+SUMMARY
+  introduction: PASS (0.20s)
+  image_describe: FAIL (0.46s)
+  fact_recall: PASS (0.11s)
+
+Total: 2/3 passed, 1 failed, 0 errors
+Total time: 3.95s

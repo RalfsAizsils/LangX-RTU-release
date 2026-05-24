@@ -1,0 +1,50 @@
+LangX Python Test – 2026-05-12T19:11:26.768117
+Model: d:\School\RTU\LangX\SolutionTest\model\Qwen_Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf
+Image: d:\School\RTU\LangX\SolutionTest\robot2.jpg
+============================================================
+Model load time: 3.09s
+
+--- introduction: Basic question about sky color ---
+Prompt: Hello! I want to have a conversation with you. Here is an important fact to remember: My name is Jimmy. Now, what color is the sky on a clear day?
+Response: The sky on a clear day is typically blue.
+Pattern: blue
+Result: PASS (0.19s)
+
+--- image_describe: Describe the robot2.jpg image ---
+Prompt: Describe what you see in this image in detail.
+Response: The image is a detailed design concept for a mechanical combat robot named "Scarab Azul" and its pilot. 
+
+- **Scarab Azul Robot**: 
+  - The robot is primarily blue and gray with white accents, giving it a high-tech, mechanical look.
+  - It is large, standing at a height of 10.3 meters, with a speed of 120 KPH.
+  - It is equipped with various weapons, including two internal Gatling guns, a Core Rail Gun, and two sets of mounted blade weapons, totaling 200 Cluster Missiles.
+  - The design is robust and detailed, indicating a heavy-duty combat vehicle.
+
+- **Pilot**: 
+  - The pilot is dressed in a white combat suit with blue accents, matching the robot’s color scheme.
+  - The pilot's suit includes a high-collared jacket, gloves, and boots, suggesting a focus on functionality and protection.
+  - The pilot's helmet or hood is not clearly visible, implying that their face is uncovered, although this is speculative.
+
+- **Background and Text**: 
+  - The background is a gradient of blue and gray, matching the robot's color scheme.
+  - The top right corner of the image features the text "SCARAB AZUL" in bold.
+  - There's a smaller text in the bottom left corner, reading "PROTECT CHITIN MECHANICAL BLUE."
+
+This image combines elements of futuristic design with detailed specifications, suggesting it is from a fictional universe where such robots are used for combat.
+Pattern: robot|mech|machine|armor|metal|figure|character
+Result: PASS (12.52s)
+
+--- fact_recall: Recall fact from the introduction ---
+Prompt: Earlier I told you an important fact. What was it? Repeat it.
+Response: Your name is Jimmy.
+Pattern: Jimmy
+Result: PASS (0.33s)
+
+============================================================
+SUMMARY
+  introduction: PASS (0.19s)
+  image_describe: PASS (12.52s)
+  fact_recall: PASS (0.33s)
+
+Total: 3/3 passed, 0 failed, 0 errors
+Total time: 16.22s
